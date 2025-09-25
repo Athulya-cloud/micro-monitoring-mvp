@@ -1,0 +1,4 @@
+microservice,starttime,endtime,readable_starttime,readable_endtime,responsecode,latency,memory_usage,cpu,health
+Email,1.73E+12,1.73E+12,23:30:06,23:30:07,200,23,398696160,98900000,TRUE
+SMS,1.73E+12,1.73E+12,23:32:07,23:32:07,200,16,404261696,37254000,TRUE
+WA,1.73E+12,1.73E+12,24:57:02,24:57:02,200,14,480161320,34680000,TRUE
