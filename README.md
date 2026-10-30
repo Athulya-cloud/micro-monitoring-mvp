@@ -1,15 +1,18 @@
-# Micro Monitoring MVP
+<h1 align="center">Micro Monitoring MVP</h1>
+<p align="center"><b>See how all your services are doing, in one place.</b></p>
 
-A small end-to-end monitor for microservices. Services send health metrics to an API, they are stored in Postgres, and a dashboard shows them live.
+<p align="center"><img src="assets/architecture.png" alt="How Micro Monitoring works" width="760"></p>
 
-![architecture](assets/architecture.png)
+Microservices go down quietly. This small monitor collects health metrics from every service, stores them, and shows latency and status on a live dashboard, so you spot trouble before your users do.
 
-## What it does
+Send a record with one request. See it on the dashboard seconds later.
 
-- **Ingest:** a FastAPI endpoint (`POST /ingest`) accepts one metrics record per call
-- **Store:** every record goes into a Postgres `monitor` table
-- **See:** a Streamlit dashboard shows the table and a latency chart
-- **Each record has:** microservice name, start/end time, response code, latency, memory, CPU, health
+## Why you'll like it
+
+- **One call to report:** a single `POST /ingest` takes a metrics record from any service
+- **Nothing gets lost:** every record is saved in Postgres
+- **See it at a glance:** a Streamlit dashboard shows the full table and a latency chart
+- **Tracks what matters:** response code, latency, memory, CPU and health for each service
 
 ## Run it
 
